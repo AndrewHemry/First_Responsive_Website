@@ -23,6 +23,7 @@ header {
     grid-row: 1;
     background-color: #76BA99;
     color: aliceblue;
+    /* Flex is used to contain the title in the centeral box */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -44,19 +45,23 @@ header {
 .border {
     border: solid 8px;
     width: auto;
-    height: 25px;
+    height: 50px;
 }
 
 .borderOne {
-    border-color: #607EAA;
+    background-color: #607EAA;
+    border-color: black;
 }
 
 .borderTwo {
-    border-color: #DF7861;
+    background-color: #DF7861;
+    border-color: black;
+
 }
 
 .borderThree {
-    border-color: #76BA99;
+    background-color: #76BA99;
+    border-color: black;
 }
 
 .flex {
@@ -68,8 +73,26 @@ p {
 }
 
 @media (max-width: 576px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
     header {
         background-color: #607EAA;
+        height: 300px;
+    }
+
+    .border {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .flex {
+        padding: 10px;
+        width: 200px;
     }
 
     .tileBoxes {
@@ -79,4 +102,20 @@ p {
         background-color: white;
         color: black;
     } 
+
+    .borderOne {
+        background-color: #607EAA;
+        border-color: white;
+    }
+    
+    .borderTwo {
+        background-color: #DF7861;
+        border-color: white;
+    
+    }
+    
+    .borderThree {
+        background-color: #76BA99;
+        border-color: white;
+    }
 }
